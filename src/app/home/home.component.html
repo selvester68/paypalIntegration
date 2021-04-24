@@ -1,0 +1,18 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" position="end" [style.width.%]="40">
+        <app-cart *ngIf="product"></app-cart>
+        <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+            show Cart
+        </button> -->
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="example-sidenav-content">
+            <router-outlet></router-outlet>
+        </div>
+        <button type="button" mat-button (click)="openDrawer(drawer)">
+            checkOut
+        </button>
+
+    </mat-drawer-content>
+
+</mat-drawer-container>

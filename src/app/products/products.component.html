@@ -1,0 +1,6 @@
+<mat-selection-list #product [multiple]="false" (selectionChange)="OnProductChange($event)">
+    <mat-list-option *ngFor="let product of products" [value]="product">
+        <span>{{product.name}}</span>
+        <span>{{product.price}}</span>
+    </mat-list-option>
+</mat-selection-list>
